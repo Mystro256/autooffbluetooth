@@ -1,1 +1,1 @@
-automatically turn off bluetooth if disconnected
+Automatically turn off bluetooth if disconnected
