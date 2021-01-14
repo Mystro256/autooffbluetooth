@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Auto-Éteint Bluetooth</string>
-    <string name="WelcomeText">Rien à configurer! Bluetooth s\'éteindra automatiquement.</string>
+    <string name="app_name">Auto-Désactivé Bluetooth</string>
+    <string name="WelcomeText">Rien à configurer! Bluetooth se désactivera automatiquement.</string>
     <string name="batteryOptimizationText">L\'optimisation de la batterie est activée pour cette application, ce qui peut l\'empêcher de fonctionner comme prévu.</string>
     <string name="batteryOptimizationButton">Désactiver l\'optimisation de la batterie</string>
 </resources>
