@@ -1,0 +1,1 @@
+* Changing from leanback launcher to regular launcher to fix on Android Pie
