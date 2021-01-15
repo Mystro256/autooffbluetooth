@@ -1,0 +1,5 @@
+Um aplicativo Android simples para desactivar automaticamente o bluetooth quando desconectado.
+
+Sem configuração, deve funcionar como está, sem garantias e pode ser necessário desativar a otimização da bateria para o aplicativo. Para versões recentes do Android, parece que ele precisa ser iniciado pelo menos uma vez para funcionar.
+
+Se o BT for desconectado e reconectado rapidamente, o aplicativo evitará a desativação desnecessária.
