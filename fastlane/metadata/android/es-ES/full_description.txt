@@ -1,6 +1,6 @@
 Una aplicación simple de Android para apagar automáticamente la conectividad blutooth en caso que este sea desconectado.
 
-No se necesita configuración, deberia de funcionar tal cual. No se garantiza su funcionamiento y puede que se llegue a necesitar la desactivación de la optimización de energía para la aplicación. Para versiones recientes de android parece que se necesita inicializar el programa almenos una véz.
+No se necesita configuración, deberia de funcionar tal cual. No se garantiza su funcionamiento y puede que se llegue a necesitar la desactivación de la optimización de energía para la aplicación. Para versiones recientes de android parece que se necesita inicializar el programa al menos una véz.
 
 Si el bluetooth se desconecta y reconecta de forma rápida, la aplicación evitará ser activada de forma innecesaria.
 
