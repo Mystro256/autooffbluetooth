@@ -13,6 +13,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final int DISABLE_BATTERY_OPTIMIZATION = 0;
+
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent data) {
+        if (requestCode == DISABLE_BATTERY_OPTIMIZATION) {
+            if (resultCode == RESULT_OK) {
+                hideBatteryOptimization();
+            }
+        }
+    }
+
     private void hideBatteryOptimization() {
         TextView WelcomeText = findViewById(R.id.WelcomeText);
         TextView batteryOptimizationText = findViewById(R.id.batteryOptimizationText);
@@ -41,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
         intent.setData(Uri.parse("package:" + packageName));
-        startActivity(intent);
-        hideBatteryOptimization();
+        startActivityForResult(intent, DISABLE_BATTERY_OPTIMIZATION);
     }
 }
