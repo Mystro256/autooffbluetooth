@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent data) {
+        // Call back if user agrees to disabling battery optimization
         if (requestCode == DISABLE_BATTERY_OPTIMIZATION) {
             if (resultCode == RESULT_OK) {
                 hideBatteryOptimization();
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // By default, a battery optimization warning amd button is shown; this
+    // function hides the warning/button and shows the welcome text instead
     private void hideBatteryOptimization() {
         TextView WelcomeText = findViewById(R.id.WelcomeText);
         TextView batteryOptimizationText = findViewById(R.id.batteryOptimizationText);
@@ -38,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Hide battery optimization warning if battery optimization is
+        // already disabled or user is running something older than android M
         PowerManager powMan = (PowerManager) getSystemService(POWER_SERVICE);
         String packageName = getPackageName();
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M ||
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         String packageName = getPackageName();
 
+        // Request disabling battery optimization and request a call back
         intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
         intent.setData(Uri.parse("package:" + packageName));
         startActivityForResult(intent, DISABLE_BATTERY_OPTIMIZATION);
