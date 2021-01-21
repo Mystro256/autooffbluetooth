@@ -1,0 +1,2 @@
+* Drop unnecessary wake lock permission
+* Add new icon
