@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Auto Off Bluetooth</string>
+    <string name="WelcomeText">没什么可配置的！蓝牙将自动关闭。</string>
+    <string name="batteryOptimizationText">系统对本应用启用了电池优化，这可能导致它不像预期得那样工作。</string>
+    <string name="batteryOptimizationButton">禁用电池优化</string>
+</resources>
